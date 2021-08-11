@@ -8,25 +8,20 @@ def main():
         "1. Menghitung SPP",
         "2. CM ke Inchi Konverter",
         "3. Menghitung Luas Segitiga",
-        "4. Menghitung Luas Lingkaran",
+        "4. Rumus Lingkaran",
         "5. Keluar"
     ]
     for i in menu:
         print(i)
-    pilih = input("Masukan Nomor Program yang Dipilih : ")
-    pilih = int(pilih)
+    pilih = int(input("Masukan Nomor Program yang Dipilih : "))
 
     if (pilih==1):
         os.system("cls")
         print("\nProgram Menghitung SPP")
-        sarana = input("biaya sarana\t: ")
-        spp_ttp = input("spp tetap\t: ")
-        spp_var = input("spp var \t: ")
-        sks = input("sks\t\t: ")
-        sarana = float(sarana) * 0.5
-        spp_ttp = float(spp_ttp)
-        sks = int(sks)
-        spp_var = float(spp_var) 
+        sarana = float(input("biaya sarana\t: ")) * 0.5
+        spp_ttp = float(input("spp tetap\t: "))
+        spp_var = float(input("spp var \t: "))
+        sks = int(input("sks\t\t: "))
 
         spp_var_fix = spp_var * sks
         total = sarana + spp_ttp + spp_var_fix
@@ -47,10 +42,8 @@ def main():
     elif (pilih==2):
         os.system("cls")
         print("\nProgram Konversi Cm ke Inchi")
-        cm = input("masukkan nilai (cm) : ")
-        cm = int(cm)
-        inch = 0.393
-        inch = float(inch)
+        cm = int(input("masukkan nilai (cm) : "))
+        inch = float(0.393)
 
         konversi = cm * inch
         
@@ -67,7 +60,7 @@ def main():
 
     elif (pilih==4):
         os.system("cls")
-        print("\nProgram Hitung Luas & Keliling Lingkaran")
+        print("\nProgram Hitung Lingkaran")
         hitung = [
             "1. Luas",
             "2. Keliling",
@@ -75,20 +68,19 @@ def main():
         ]
         for i in hitung:
             print(i)
-        pilih = input("Masukan Nomor Program yang Dipilih : ")
-        pilih = int(pilih)
+        pilih = int(input("Masukan Nomor Program yang Dipilih : "))
         
         if (pilih==1):
             os.system("cls")
             print("\nMenghitung luas lingkaran")
-            r = input("Jari-jari\t: ")
-            r = float(r)
+            r = float(input("Jari-jari\t: "))
+            s = input("Satuan\t\t: ")
             
             L = r*r*3.14
             
             os.system("cls")
             print("\nHasil perhitungan luas lingkaran")
-            L = f"Luas = phi * {r} x {r} \nLuas = {L}"
+            L = f"Luas = phi * {r} x {r} \nLuas = {L}{s}"
             print(L)
             input("\nTekan enter untuk lanjut..")
             main()
@@ -96,14 +88,14 @@ def main():
         elif (pilih==2):
             os.system("cls")
             print("\nMenghitung keliling lingkaran")
-            d = input("Diameter\t: ")
-            d = float(d)
+            d = float(input("Diameter\t: "))
+            s = input("Satuan\t\t: ")
             
             K = d*3.14
             
             os.system("cls")
             print("\nHasil perhitungan keliling lingkaran")
-            K = f"Keliling = phi x {d} \nKeliling = {K}"
+            K = f"Keliling = phi x {d} \nKeliling = {K}{s}"
             print(K)
             input("\nTekan enter untuk lanjut..")
             main()
@@ -111,15 +103,15 @@ def main():
         elif (pilih==3):
             os.system("cls")
             print("\nMencari diameter lingkaran berdasar luas")
-            l = input("Luas\t: ")
-            l = int(l)
+            l = int(input("Luas\t: "))
+            s = input("Satuan\t\t: ")
             
             d1 = l/3.14
             D = math.sqrt(d1) * 2
             
             os.system("cls")
             print("\nHasil perhitungan diameter lingkaran berdasar luas")
-            D = f"Diameter = {int(D)}"
+            D = f"Diameternya adalah {int(D)}{s}"
             print(D)
             input("\nTekan enter untuk lanjut..")
             main()

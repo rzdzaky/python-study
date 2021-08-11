@@ -7,7 +7,7 @@ def main():
         "\nPilih Program yang Tersedia :",
         "1. Menghitung SPP",
         "2. CM ke Inchi Konverter",
-        "3. Menghitung Luas Segitiga",
+        "3. Bentuk Segitiga",
         "4. Rumus Lingkaran",
         "5. Keluar"
     ]
@@ -56,7 +56,84 @@ def main():
 
     elif (pilih==3):
         os.system("cls")
-        print("\nProgram Hitung Luas Segitiga")
+        print("\nBentuk Segitiga ke 1\n")
+        a = 5
+        for i in range(0, a):
+            for j in range(0, i + 1):
+                print('* ' , end='')
+            print('')
+        
+        input("\nenter untuk bentuk selanjutnya..")
+        
+        os.system("cls")
+        print("\nBentuk Segitiga ke 2\n")
+        a = 6
+        for i in range(0, a):
+            for j in range(0, a - 1):
+                print('* ' , end='')
+            a -= 1
+            print('')
+        
+        input("\nenter untuk bentuk selanjutnya..")
+        
+        os.system("cls")
+        print("\nBentuk Segitiga ke 3\n")
+        a = 5
+        s = 2 * a - 2 # for spaces
+        for i in range(0, a):
+            for j in range(0, s):
+                print(' ',end='')
+            s -= 2
+            for j in range(0, i + 1):
+                print('* ', end='')
+            print('')
+        
+        input("\nenter untuk bentuk selanjutnya..")
+        
+        os.system("cls")
+        print("\nBentuk Segitiga ke 4\n")
+        a = 5
+        s = 0 # for spaces
+        for i in range(0, a):
+            for j in range(0, s):
+                # print(j, end='')
+                print(' ',end='')
+            s += 2
+            for j in range(0, a):
+                print('* ' , end='')
+            a -= 1
+            print('')
+            
+        input("\nenter untuk bentuk selanjutnya..")
+        
+        os.system("cls")
+        print("\nBentuk Segitiga ke 5\n")
+        a = 5
+        s = a - 1 # for spaces
+        for i in range(0, a):
+            for j in range(0, s):
+                print(' ', end='')
+            s -= 1
+            for j in range(0, i + 1):
+                print('* ', end='')
+            print('')
+        
+        input("\nenter untuk bentuk selanjutnya..")
+        
+        os.system("cls")
+        print("\nBentuk Segitiga ke 6\n")
+        a = 5
+        s = 0 # for spaces
+        for i in range(0, a):
+            for j in range(0, s):
+                print(' ',end='')
+            s += 1
+            for j in range(0, a):
+                print('* ' , end='')
+            a -= 1
+            print('')
+        input("\nTekan enter untuk lanjut..")
+        main()
 
     elif (pilih==4):
         os.system("cls")

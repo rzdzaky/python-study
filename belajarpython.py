@@ -3,16 +3,16 @@ import math
 
 def main():
     os.system("cls")
+    print("\nPilih Program yang Tersedia :")
     menu = [
-        "\nPilih Program yang Tersedia :",
-        "1. Menghitung SPP",
-        "2. CM ke Inchi Konverter",
-        "3. Bentuk Segitiga",
-        "4. Rumus Lingkaran",
-        "5. Keluar"
+        "Menghitung SPP",
+        "CM ke Inchi Konverter",
+        "Bentuk Segitiga",
+        "Rumus Lingkaran",
+        "Keluar"
     ]
-    for i in menu:
-        print(i)
+    for i,menu in enumerate(menu):
+        print(i+1,menu)
     pilih = int(input("Masukan Nomor Program yang Dipilih : "))
 
     if (pilih==1):
@@ -139,12 +139,12 @@ def main():
         os.system("cls")
         print("\nProgram Hitung Lingkaran")
         hitung = [
-            "1. Luas",
-            "2. Keliling",
-            "3. Diameter berdasarkan luas"
+            "Luas",
+            "Keliling",
+            "Diameter berdasarkan luas"
         ]
-        for i in hitung:
-            print(i)
+        for i, hitung in enumerate(hitung):
+            print(i+1,hitung)
         pilih = int(input("Masukan Nomor Program yang Dipilih : "))
         
         if (pilih==1):

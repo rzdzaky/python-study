@@ -1,21 +1,10 @@
 import os
 import math
 
-def main():
-    os.system("cls")
-    print("\nPilih Program yang Tersedia :")
-    menu = [
-        "Menghitung SPP",
-        "CM ke Inchi Konverter",
-        "Bentuk Segitiga",
-        "Rumus Lingkaran",
-        "Keluar"
-    ]
-    for i,menu in enumerate(menu):
-        print(i+1,menu)
-    pilih = int(input("Masukan Nomor Program yang Dipilih : "))
 
-    if (pilih==1):
+
+def main():
+    def menu_pertama():
         os.system("cls")
         print("\nProgram Menghitung SPP")
         sarana = float(input("biaya sarana\t: ")) * 0.5
@@ -39,14 +28,14 @@ def main():
         input("\nTekan enter untuk lanjut..")
         main()
 
-    elif (pilih==2):
+    def menu_kedua():
         os.system("cls")
         print("\nProgram Konversi Cm ke Inchi")
         cm = int(input("masukkan nilai (cm) : "))
         inch = float(0.393)
 
         konversi = cm * inch
-        
+            
         konversi = f"{cm}cm adalah {konversi}inch"
         os.system("cls")
         print("\nHasil Koversi")
@@ -54,7 +43,7 @@ def main():
         input("\nTekan enter untuk lanjut..")
         main()
 
-    elif (pilih==3):
+    def menu_ketiga():
         os.system("cls")
         print("\nBentuk Segitiga ke 1\n")
         a = 5
@@ -134,8 +123,8 @@ def main():
             print('')
         input("\nTekan enter untuk lanjut..")
         main()
-
-    elif (pilih==4):
+    
+    def menu_keempat():
         os.system("cls")
         print("\nProgram Hitung Lingkaran")
         hitung = [
@@ -176,7 +165,7 @@ def main():
             print(K)
             input("\nTekan enter untuk lanjut..")
             main()
-            
+        
         elif (pilih==3):
             os.system("cls")
             print("\nMencari diameter lingkaran berdasar luas")
@@ -198,14 +187,42 @@ def main():
             print("\nnomor program tidak tersedia !")
             input()
             main()
-            
-
-    elif (pilih==5):
+    
+    def keluar():
         os.system("cls")
         print("\nAnda Keluar Program, Terimakasih Sudah Menggunakan")
         input()
         os.system("cls")
         exit()
+        
+    os.system("cls")
+    print("\nPilih Program yang Tersedia :")
+    menu = [
+        "Menghitung SPP",
+        "CM ke Inchi Konverter",
+        "Bentuk Segitiga",
+        "Rumus Lingkaran",
+        "Game Quis",
+        "Keluar"
+    ]
+    for i,menu in enumerate(menu):
+        print(i+1,menu)
+    pilih = int(input("Masukan Nomor Program yang Dipilih : "))
+
+    if (pilih == 1):
+        menu_pertama()
+
+    elif (pilih==2):
+        menu_kedua()
+
+    elif (pilih==3):
+        menu_ketiga()
+
+    elif (pilih==4):
+        menu_keempat()   
+
+    elif (pilih==5):
+        keluar()
         
     else:
         os.system("cls")

@@ -7,6 +7,11 @@ import random
 pygame.init()
 
 def main():
+    def waktu():
+        time.localtime()
+        string_waktu = time.strftime("Jam %H:%M:%S WIB | Tgl %m-%d-%Y")
+        print(string_waktu)
+        
     def menu_pertama():
         os.system("cls")
         print("\nProgram Menghitung SPP")
@@ -313,6 +318,7 @@ def main():
         exit()
         
     os.system("cls")
+    waktu()
     print("\nPilih Program yang Tersedia :")
     menu = [
         "Menghitung SPP",
@@ -324,25 +330,28 @@ def main():
     ]
     for i,menu in enumerate(menu):
         print(i+1,menu)
-    pilih = int(input("Masukan Nomor Program yang Dipilih : "))
+    pilih = input("Masukan Nomor Program yang Dipilih : ").lower()
 
-    if (pilih == 1):
+    if (pilih == '1'):
         menu_pertama()
 
-    elif (pilih==2):
+    elif (pilih=='2'):
         menu_kedua()
 
-    elif (pilih==3):
+    elif (pilih=='3'):
         menu_ketiga()
 
-    elif (pilih==4):
+    elif (pilih=='4'):
         menu_keempat()   
     
-    elif (pilih==5):
+    elif (pilih=='5'):
         menu_kelima()  
 
-    elif (pilih==6):
+    elif (pilih=='6'):
         keluar()
+    
+    elif (pilih=="r"):
+        main()
         
     else:
         os.system("cls")

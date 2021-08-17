@@ -1,6 +1,7 @@
 import os
 import math
 import pygame
+# import datetime
 import time
 import random
  
@@ -11,6 +12,9 @@ def main():
         time.localtime()
         string_waktu = time.strftime("Jam %H:%M:%S WIB | Tgl %m-%d-%Y")
         print(string_waktu)
+        # while True:
+        #     print(datetime.datetime.now().strftime("Jam %H:%M:%S WIB | Tgl %m-%d-%Y"), end="\r")
+            # time.sleep(1)
         
     def menu_pertama():
         os.system("cls")
